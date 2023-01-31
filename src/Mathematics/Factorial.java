@@ -15,6 +15,12 @@ public class Factorial {
 		return fact;
 	}
 	
+	public static long getFactorialOfNRec(int n) {
+		if (n==0)return 1;
+//		Not efficient as space complexity will become theta of n
+		return n*getFactorialOfNRec(n-1);
+	}
+	
 	private static int primeDigitsInFactorial(int n) {
 		return Digits.noOfPrimeDigits(getFactorialOfN(n));
 	}
