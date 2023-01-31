@@ -13,7 +13,7 @@ public class Digits {
 		return count;
 	}
 	
-	private static int noOfPrimeDigits(long n) {
+	public static int noOfPrimeDigits(long n) {
 		int count=0;
 		while (n>0) {
 			if(PrimeNumber.isPrime(n%10))
