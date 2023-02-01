@@ -44,7 +44,6 @@ public class DivisorsOfN {
 		i--;
 		//eg 25-- i=6 will become i=5 and to avoid printing 5 again
 		if(i*i==N) i--; 
-		
 		for (;i>=1;i--) {
 			if(N%i==0)
 				System.out.print(N/i+" ");
