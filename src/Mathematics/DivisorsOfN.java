@@ -1,5 +1,7 @@
 package Mathematics;
 
+import java.util.ArrayList;
+
 public class DivisorsOfN {
 	
 	public static void main(String[] args) {
@@ -48,5 +50,21 @@ public class DivisorsOfN {
 			if(N%i==0)
 				System.out.print(N/i+" ");
 		}
+	}
+	
+	public static ArrayList<Integer> allDivisors(int N){
+		ArrayList<Integer> res =new ArrayList<Integer>();
+		int i=1;
+		for (;i*i<=N;i++) {
+			if(N%i==0)
+				res.add(i);
+		}
+		i--;
+		if(i*i==N) i--;
+		for(;i>1;i--) {
+			if(N%i==0)
+				res.add(N/i);
+		}
+		return res;
 	}
 }
