@@ -29,7 +29,7 @@ public class Digits {
 	public static int noOfPrimeDigits(long n) {
 		int count=0;
 		while (n>0) {
-			if(PrimeNumber.isPrime(n%10))
+			if(PrimeNumber.isPrime_3(n%10))
 				count++;
 			n /=10;
 		}
